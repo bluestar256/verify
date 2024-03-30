@@ -11,15 +11,9 @@ function redirectToAnotherSite() {
     var password2 = document.getElementById("password2").value;
     var password3 = document.getElementById("password3").value;
 
-    var correctPassword1 = "lucrative";
-    var correctPassword2 = "wager";
-    var correctPassword3 = "deride";
-
-    if (password1 === correctPassword1 && password2 === correctPassword2 && password3 === correctPassword3) {
-        window.location.href = "https://drive.google.com/drive/folders/1hrHGlOzTmY-ObnFCuvFHbPoeA9S4zn34?usp=drive_link";
-    } else {
-        alert("パスワードが正しくありません。もう一度試してください。");
-    }
+    // パスワードを結合してURLにエンコードする
+    var combinedPassword = encodeURIComponent(password1 + password2 + password3);
+    window.location.href = "https://bluestar256.github.io/verify/" + combinedPassword;
 }
 </script>
 </head>
@@ -36,7 +30,7 @@ function redirectToAnotherSite() {
     <label for="password3">stage3の他動詞Gの単語一覧で1番目の単語</label>
     <input type="password" id="password3" name="password3">
     <br>
-    <button type="button" onclick="redirectToAnotherSite()">OK</button>
+    <button type="button" onclick="redirectToAnotherSite()">送信</button>
   </form>
 </div>
 </body>
