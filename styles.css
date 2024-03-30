@@ -32,7 +32,7 @@ label {
   margin-bottom: 10px;
 }
 
-input[type="password"] {
+input[type="text"] {
   width: calc(100% - 22px); /* 右側の余白を調整 */
   padding: 10px;
   margin-bottom: 20px;
