@@ -1,43 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Password Redirect</title>
-<link rel="stylesheet" href="styles.css">
-<script>
-function redirectToAnotherSite() {
-    var password1 = document.getElementById("password1").value;
-    var password2 = document.getElementById("password2").value;
-    var password3 = document.getElementById("password3").value;
-
-    var correctPassword1 = "password1";
-    var correctPassword2 = "password2";
-    var correctPassword3 = "password3";
-
-    if (password1 === correctPassword1 && password2 === correctPassword2 && password3 === correctPassword3) {
-        window.location.href = "https://example.com";
-    } else {
-        alert("Invalid Passwords. Please try again.");
-    }
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d3edf8; /* パステルカラーの水色 */
+  margin: 0;
+  padding: 20px; /* 全体的な余白の調整 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-</script>
-</head>
-<body>
-<div class="container">
-  <h2>Password Redirect</h2>
-  <form>
-    <label for="password1">Password 1:</label>
-    <input type="password" id="password1" name="password1">
-    <br>
-    <label for="password2">Password 2:</label>
-    <input type="password" id="password2" name="password2">
-    <br>
-    <label for="password3">Password 3:</label>
-    <input type="password" id="password3" name="password3">
-    <br>
-    <button type="button" onclick="redirectToAnotherSite()">Submit</button>
-  </form>
-</div>
-</body>
-</html>
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* 入力欄を中央に配置 */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="password"] {
+  width: calc(100% - 22px); /* 右側の余白を調整 */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
