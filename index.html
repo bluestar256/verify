@@ -4,39 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Password Redirect</title>
+<link rel="stylesheet" href="styles.css">
 <script>
 function redirectToAnotherSite() {
-    // 入力されたパスワードを取得
     var password1 = document.getElementById("password1").value;
     var password2 = document.getElementById("password2").value;
     var password3 = document.getElementById("password3").value;
 
-    // 正しいパスワードを設定
-    var correctPassword1 = "lucrative";
-    var correctPassword2 = "wager";
-    var correctPassword3 = "deride";
+    var correctPassword1 = "password1";
+    var correctPassword2 = "password2";
+    var correctPassword3 = "password3";
 
-    // 入力されたパスワードが正しいかチェック
     if (password1 === correctPassword1 && password2 === correctPassword2 && password3 === correctPassword3) {
-        // パスワードが正しい場合、別のサイトにリダイレクト
         window.location.href = "https://example.com";
     } else {
-        // パスワードが正しくない場合、アラートを表示
         alert("Invalid Passwords. Please try again.");
     }
 }
 </script>
 </head>
 <body>
-<h2>Password Redirect</h2>
-<form>
-  <label for="password1">Password 1:</label>
-  <input type="password" id="password1" name="password1"><br><br>
-  <label for="password2">Password 2:</label>
-  <input type="password" id="password2" name="password2"><br><br>
-  <label for="password3">Password 3:</label>
-  <input type="password" id="password3" name="password3"><br><br>
-  <button type="button" onclick="redirectToAnotherSite()">Submit</button>
-</form>
+<div class="container">
+  <h2>Password Redirect</h2>
+  <form>
+    <label for="password1">Password 1:</label>
+    <input type="password" id="password1" name="password1">
+    <br>
+    <label for="password2">Password 2:</label>
+    <input type="password" id="password2" name="password2">
+    <br>
+    <label for="password3">Password 3:</label>
+    <input type="password" id="password3" name="password3">
+    <br>
+    <button type="button" onclick="redirectToAnotherSite()">Submit</button>
+  </form>
+</div>
 </body>
 </html>
