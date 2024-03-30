@@ -16,7 +16,7 @@ function redirectToAnotherSite() {
     var correctPassword3 = "dride";
 
     if (password1 === correctPassword1 && password2 === correctPassword2 && password3 === correctPassword3) {
-        window.location.href = "https://example.com";
+        window.location.href = "https://drive.google.com/drive/folders/1hrHGlOzTmY-ObnFCuvFHbPoeA9S4zn34?usp=drive_link";
     } else {
         alert("パスワードが正しくありません。もう一度試してください。");
     }
@@ -25,7 +25,7 @@ function redirectToAnotherSite() {
 </head>
 <body>
 <div class="container">
-  <h2>パスワードリダイレクト</h2>
+  <h2>確認用ページ</h2>
   <form>
     <label for="password1">stage1の形容詞Aの単語一覧で1番目の単語</label>
     <input type="password" id="password1" name="password1">
@@ -36,7 +36,7 @@ function redirectToAnotherSite() {
     <label for="password3">stage3の他動詞Gの単語一覧で1番目の単語</label>
     <input type="password" id="password3" name="password3">
     <br>
-    <button type="button" onclick="redirectToAnotherSite()">送信</button>
+    <button type="button" onclick="redirectToAnotherSite()">OK</button>
   </form>
 </div>
 </body>
