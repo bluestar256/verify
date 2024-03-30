@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #d3edf8; /* パステルカラーの水色 */
   margin: 0;
-  padding: 20px; /* 全体的な余白の調整 */
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center; /* 入力欄を中央に配置 */
+  text-align: center;
 }
 
 h2 {
@@ -33,7 +33,7 @@ label {
 }
 
 input[type="text"] {
-  width: calc(100% - 22px); /* 右側の余白を調整 */
+  width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
